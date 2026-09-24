@@ -390,3 +390,6 @@ a { color: var(--accent); }
   .work--wide .work__img { flex-basis: 50%; min-height: 0; aspect-ratio: 16 / 7; }
   .work__img { aspect-ratio: 16 / 9; }
 }
+.contact__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.contact__actions .btn { max-width: 100%; }
+.js-mail-text { overflow-wrap: anywhere; }

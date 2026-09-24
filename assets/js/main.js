@@ -20,3 +20,12 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '-45% 0px -50% 0px' });
   document.querySelectorAll('section[id]').forEach((s) => spy.observe(s));
 }
+
+// メールアドレスは収集ボット対策で表示時に組み立てる
+document.querySelectorAll('.js-mail').forEach((a) => {
+  const addr = a.dataset.u + '@' + a.dataset.d;
+  a.href = 'mailto:' + addr;
+});
+document.querySelectorAll('.js-mail-text').forEach((el) => {
+  el.textContent = ['shun.seino.dev', 'gmail.com'].join('@');
+});
