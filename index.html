@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>清野 駿 | Shun Seino — Portfolio</title>
+  <meta name="description" content="清野駿（Shun Seino）のポートフォリオ。Java・TypeScript・iOS、AWS / OCI / Terraform によるインフラ構築、ゲーム開発の実績。">
+  <meta property="og:title" content="清野 駿 | Shun Seino — Portfolio">
+  <meta property="og:description" content="Java 5年・フロントエンド・クラウド/IaC・ゲーム開発。作ったもの、やってきたこと。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://seisyun9665.github.io/portfolio/assets/img/works/narourpg.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#top">shun<span>.seino</span></a>
+    <nav class="nav__links" aria-label="セクション">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#infra">Infra</a>
+      <a href="#works">Works</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__text">
+        <p class="eyebrow">Software Engineer / Yokohama</p>
+        <h1>清野 駿<small>Shun Seino</small></h1>
+        <p class="hero__lead">
+          Java で型とオブジェクト指向を覚え、TypeScript / Vue でプロダクトを触り、
+          いまはクラウドとモバイルに手を広げているエンジニアです。
+          <strong>「仕組みで回るようにする」</strong>のが好きで、
+          友人と遊ぶゲームサーバーも Terraform と GitHub Actions で管理しています。
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#works">作ったものを見る</a>
+          <a class="btn" href="https://github.com/seisyun9665" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="term" aria-label="プロフィールのターミナル風表示">
+        <div class="term__bar"><i></i><i></i><i></i><span>~/shun — zsh</span></div>
+        <pre class="term__body"><span class="p">$</span> whoami
+shun-seino
+
+<span class="p">$</span> cat stack.yml
+<span class="k">lang</span>:   [Java, TypeScript, Swift, Python]
+<span class="k">front</span>:  [Vue, React]
+<span class="k">cloud</span>:  [AWS, OCI]
+<span class="k">iac</span>:    [AWS CDK, Terraform]
+<span class="k">ci</span>:     [GitHub Actions]
+
+<span class="p">$</span> uptime --java
+<span class="s">5+ years</span>, load: ▇▇▇▇▇<span class="cursor">▌</span></pre>
+      </div>
+    </div>
+
+    <ul class="wrap hero__stats">
+      <li><b>5<span>yrs+</span></b>Java 歴</li>
+      <li><b>AWS</b>Cloud Practitioner 取得</li>
+      <li><b>OCI</b>ゲームサーバーを IaC で運用保守</li>
+      <li><b>8+</b>ゲーム・Web 作品</li>
+    </ul>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2 class="h2"><span>01</span>About</h2>
+      <div class="about">
+        <div class="about__body">
+          <p>
+            一関高専で情報・ソフトウェアを学び、筑波大学情報学群に編入。大学院（情報学学位プログラム）では
+            LLM を用いた深層学習モデルの解釈性に関する研究を行い、2026年3月に修士課程を修了しました。
+          </p>
+          <p>
+            プログラミングの入り口は Minecraft。サーバー向けプラグインを Java で書き始めたのがきっかけで、
+            そこから Web、クラウド、モバイルへと興味が広がっていきました。
+            「遊べるものを作る」ことと「それを安定して動かし続ける仕組みを作る」ことの両方が好きです。
+          </p>
+          <p>
+            2026年4月からは KDDIアジャイル開発センターでエンジニアとして働いています。
+          </p>
+        </div>
+        <dl class="about__facts">
+          <div><dt>Location</dt><dd>神奈川県 横浜市</dd></div>
+          <div><dt>Education</dt><dd>筑波大学大学院 情報学学位プログラム 修了（2026）</dd></div>
+          <div><dt>Award</dt><dd>DEIM2024 学生プレゼンテーション賞</dd></div>
+          <div><dt>Likes</dt><dd>ゲーム開発 / 自宅サーバー / バレーボール</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="section section--alt">
+    <div class="wrap">
+      <h2 class="h2"><span>02</span>Experience</h2>
+
+      <ol class="timeline">
+        <li class="tl">
+          <div class="tl__when">2026.04 —</div>
+          <div class="tl__card">
+            <h3>KDDIアジャイル開発センター株式会社 <em>エンジニア（新卒）</em></h3>
+            <p>
+              新卒研修（AWS・Web開発・スクラム・CI/CD・Terraform・デザイン思考）を経て、
+              大規模スマートフォンアプリの保守運用チームに配属。iOS アプリの不具合修正・改善を中心に担当し、
+              仕様書作成 → テスト設計 → 実装 → レビュー → 試験 → マージまでを生成AIを活用した仕様駆動開発で一貫して進めています。
+            </p>
+            <p>研修期間中はチームの GitHub Projects 運用や議事録自動化など、チーム開発環境の整備を主導しました。</p>
+            <ul class="tags"><li>Swift</li><li>Kotlin / Java</li><li>AWS</li><li>Terraform</li><li>Scrum</li></ul>
+          </div>
+        </li>
+
+        <li class="tl">
+          <div class="tl__when">学生時代<br>長期インターン</div>
+          <div class="tl__card">
+            <h3>Sky株式会社 <em>長期インターン（フロントエンド）</em></h3>
+            <p>
+              社内向け業務アプリケーションの改善に従事。TypeScript / Vue.js を用いたフロントエンドの機能追加・UI 改善を中心に担当し、
+              画面からデータベースまでの繋ぎ込み（API 経由のデータ取得・更新処理）も実装しました。
+              既存のコードベースを読み解き、実際に使われている社内ツールを少しずつ良くしていく経験を積みました。
+            </p>
+            <ul class="tags"><li>TypeScript</li><li>Vue.js</li><li>DB 連携</li><li>社内アプリ改善</li></ul>
+          </div>
+        </li>
+
+        <li class="tl">
+          <div class="tl__when">2024 — 2026.03</div>
+          <div class="tl__card">
+            <h3>筑波大学大学院 <em>研究</em></h3>
+            <p>
+              修士論文「大規模言語モデルを用いた対比因子ラベル生成手法に関する研究」。
+              テキスト集合間の差異を LLM に自然言語ラベルとして生成させるタスクを提案し、
+              複数データセット・モデル・Few-shot 条件の計36条件を自動化パイプラインで評価しました。
+              学部の卒業研究では DEIM2024 学生プレゼンテーション賞を受賞。
+            </p>
+            <ul class="tags"><li>Python</li><li>LLM</li><li>SBERT</li><li>実験自動化</li></ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="h2"><span>03</span>Skills</h2>
+
+      <div class="skills">
+        <!-- Java: featured -->
+        <article class="skill skill--feature">
+          <header class="skill__head">
+            <img src="assets/img/icons/java.svg" alt="" width="48" height="48">
+            <div>
+              <h3>Java</h3>
+              <p class="skill__meta">5年以上 ・ いちばん長く書いている言語</p>
+            </div>
+          </header>
+          <p>
+            静的型付け言語の基礎はすべて Java で身につけました。Minecraft サーバープラグインを数十本書く中で、
+            「どう設計すれば後から機能を足しやすいか」を実地で学んできました。
+          </p>
+          <ul class="chips">
+            <li>interface</li><li>抽象クラス</li><li>継承</li><li>オーバーライド</li>
+            <li>カプセル化</li><li>アクセス修飾子 / スコープ</li><li>ポリモーフィズム</li>
+          </ul>
+        </article>
+
+        <article class="skill">
+          <header class="skill__head">
+            <span class="skill__icons">
+              <img src="assets/img/icons/typescript.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/vuejs.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/react.svg" alt="" width="36" height="36">
+            </span>
+            <div>
+              <h3>Frontend</h3>
+              <p class="skill__meta">TypeScript / Vue / React</p>
+            </div>
+          </header>
+          <p>Sky でのインターンで Vue による社内アプリ改善と DB 連携を経験。個人では React / Next.js で Web サイトやクイズアプリを制作。</p>
+        </article>
+
+        <article class="skill">
+          <header class="skill__head">
+            <span class="skill__icons">
+              <img src="assets/img/icons/swift.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/kotlin.svg" alt="" width="36" height="36">
+            </span>
+            <div>
+              <h3>Mobile</h3>
+              <p class="skill__meta">Swift（学習中・急成長中）</p>
+            </div>
+          </header>
+          <p>業務で iOS を担当するようになり集中的に学習。大規模アプリの Swift コードを読んで修正できるところまで来ました。Android（Kotlin / Java）の調査も対応。</p>
+        </article>
+
+        <article class="skill">
+          <header class="skill__head">
+            <span class="skill__icons">
+              <img class="icon-aws" src="assets/img/icons/amazonwebservices.svg" alt="" width="44" height="36">
+              <img src="assets/img/icons/oracle.svg" alt="" width="36" height="36">
+            </span>
+            <div>
+              <h3>Cloud</h3>
+              <p class="skill__meta">AWS / OCI</p>
+            </div>
+          </header>
+          <p>AWS Certified Cloud Practitioner 取得。EC2 でのサーバー運用から始め、現在は OCI でゲームサーバーを運用保守。Bot 攻撃を受けた経験から、プロキシ経由でしかゲームサーバーに入れない構成にしています。</p>
+        </article>
+
+        <article class="skill">
+          <header class="skill__head">
+            <span class="skill__icons">
+              <img src="assets/img/icons/terraform.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/githubactions.svg" alt="" width="36" height="36">
+            </span>
+            <div>
+              <h3>IaC / CI/CD</h3>
+              <p class="skill__meta">AWS CDK / Terraform / GitHub Actions</p>
+            </div>
+          </header>
+          <p>AWS CDK（TypeScript）でインフラをコード化し CI/CD を整理。OCI の構成も Terraform で管理し、変更差分を GitHub Actions で自動チェックして危険な変更を通知する仕組みを自作。</p>
+        </article>
+
+        <article class="skill">
+          <header class="skill__head">
+            <span class="skill__icons">
+              <img src="assets/img/icons/python.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/firebase.svg" alt="" width="36" height="36">
+              <img src="assets/img/icons/nodejs.svg" alt="" width="36" height="36">
+            </span>
+            <div>
+              <h3>Backend / Data</h3>
+              <p class="skill__meta">Python / Firebase / Node.js</p>
+            </div>
+          </header>
+          <p>研究では Python で LLM 実験パイプラインを構築。個人開発では Firebase Functions + Firestore で API を実装し、単体テストも整備。</p>
+        </article>
+      </div>
+
+      <div class="cert">
+        <img src="assets/img/icons/amazonwebservices.svg" alt="" width="64" height="40">
+        <div>
+          <p class="cert__label">Certification</p>
+          <p class="cert__name">AWS Certified Cloud Practitioner（CLF-C02）<span>2026.05</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Infra story ===== -->
+  <section id="infra" class="section section--dark">
+    <div class="wrap">
+      <h2 class="h2"><span>04</span>Infra Journey</h2>
+      <p class="section__lead">
+        「友達と遊ぶ Minecraft サーバーを自分で立てたい」から始まった、クラウドとの付き合い方の変遷です。
+      </p>
+
+      <ol class="journey">
+        <li class="step">
+          <div class="step__icon"><img src="assets/img/icons/amazonwebservices.svg" alt="AWS" width="56" height="34"></div>
+          <p class="step__no">STEP 1</p>
+          <h3>AWS 無料枠で Minecraft サーバー</h3>
+          <p>AWS の12か月無料期間を使い、EC2 インスタンス上に Minecraft サーバーを構築・運用。インスタンスの起動・停止、ストレージ、アクセス管理など、クラウドの基本を実際に動かしながら覚えました。</p>
+        </li>
+        <li class="step">
+          <div class="step__icon"><img src="assets/img/icons/oracle.svg" alt="OCI" width="40" height="40"></div>
+          <p class="step__no">STEP 2</p>
+          <h3>OCI Always Free へ移行・運用保守</h3>
+          <p>無料期間の終了を機に Oracle Cloud Infrastructure へ移行。VCN・サブネット、セキュリティリストでのポート開放、OS のファイアウォールなどを一から設計し、友人たちが日常的に遊ぶサーバーとして運用保守を続けています。</p>
+        </li>
+        <li class="step step--alert">
+          <div class="step__icon"><img src="assets/img/icons/linux.svg" alt="" width="40" height="40"></div>
+          <p class="step__no">STEP 3</p>
+          <h3>Bot 攻撃を受けてプロキシ構成へ</h3>
+          <p>公開していたサーバーが Bot による攻撃を受けたことをきっかけに構成を見直し。ゲームサーバーの前段にプロキシサーバーを置き、<strong>ゲームサーバーにはプロキシ経由でしか入れない</strong>ようにネットワークを絞りました。外部に晒す面を最小限にしています。</p>
+        </li>
+        <li class="step">
+          <div class="step__icon"><img src="assets/img/icons/terraform.svg" alt="Terraform" width="40" height="40"></div>
+          <p class="step__no">STEP 4</p>
+          <h3>Terraform で IaC 化・自動バックアップ</h3>
+          <p>OCI の構成は Terraform でコード化し GitHub で履歴管理。自動バックアップも整備し、サイズの大きいワールドデータだけはコードと分けて管理しています。PR ごとの差分チェックと危険な変更の通知も GitHub Actions で自動化しました。</p>
+        </li>
+      </ol>
+
+      <figure class="arch" aria-label="現在のサーバー構成図">
+        <figcaption>現在の構成（OCI）</figcaption>
+        <div class="arch__scroll">
+          <div class="arch__grid">
+            <div class="arch__node arch__node--ext">
+              <b>Players</b><span>友人たち</span>
+              <b class="arch__bad">Bots ✕</b>
+            </div>
+            <div class="arch__edge">→</div>
+            <div class="arch__zone">
+              <p class="arch__zone-label">OCI VCN</p>
+              <div class="arch__row">
+                <div class="arch__node arch__node--proxy"><b>Proxy Server</b><span>唯一の公開入口<br>ポートを限定して受付</span></div>
+                <div class="arch__edge">→</div>
+                <div class="arch__node arch__node--game"><b>Game Server</b><span>プロキシからの通信のみ許可<br>外部から直接は入れない</span></div>
+              </div>
+              <div class="arch__row arch__row--sub">
+                <div class="arch__node arch__node--store"><b>自動バックアップ</b><span>ワールドデータは<br>コードとは別管理</span></div>
+              </div>
+            </div>
+            <div class="arch__side">
+              <div class="arch__node arch__node--code">
+                <img src="assets/img/icons/terraform.svg" alt="" width="22" height="22">
+                <b>Terraform</b><span>構成はすべてコード</span>
+              </div>
+              <div class="arch__node arch__node--code">
+                <img src="assets/img/icons/githubactions.svg" alt="" width="22" height="22">
+                <b>GitHub</b><span>履歴管理 + Actions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="pipeline" aria-label="Terraform の変更チェックパイプライン">
+        <figcaption>自作した Terraform 変更チェックの流れ</figcaption>
+        <div class="pipeline__scroll">
+          <ol class="pipeline__flow">
+            <li><b>git push</b><span>PR 作成</span></li>
+            <li><b>GitHub Actions</b><span>ワークフロー起動</span></li>
+            <li><b>terraform plan</b><span>OCI との差分取得</span></li>
+            <li><b>リスク判定</b><span>destroy / replace /<br>セキュリティ設定変更</span></li>
+            <li class="is-alert"><b>通知</b><span>危険な変更だけ<br>目立たせる</span></li>
+          </ol>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== Works ===== -->
+  <section id="works" class="section">
+    <div class="wrap">
+      <h2 class="h2"><span>05</span>Works</h2>
+      <p class="section__lead">ゲームを中心に、個人・チームで作ってきたもの。</p>
+
+      <div class="works">
+        <article class="work work--wide">
+          <div class="work__img"><img src="assets/img/works/narourpg.jpg" alt="NAROU RPG 公式サイトのトップ画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">Minecraft RPG サーバー / チーム開発</p>
+            <h3>NAROU RPG</h3>
+            <p>Minecraft 上で遊べるオンライン RPG。Java でゲーム本体（プラグイン）と課金システムを実装し、Firebase Functions + Firestore の API と連携。React + TypeScript で公式サイトも制作しました。</p>
+            <ul class="tags"><li>Java</li><li>TypeScript</li><li>React</li><li>Firebase</li></ul>
+            <p class="work__links"><a href="https://narourpg.web.app/" target="_blank" rel="noopener">Website ↗</a></p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/etude.png" alt="Etude のタイトル画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">音楽ゲーム / 大学チーム開発</p>
+            <h3>Etude</h3>
+            <p>五線譜を流れる音符に合わせてタップする、楽譜を読む力が身につく教育向け音ゲー。</p>
+            <ul class="tags"><li>Unity</li><li>C#</li></ul>
+            <p class="work__links">
+              <a href="https://unityroom.com/games/etude" target="_blank" rel="noopener">Play ↗</a>
+              <a href="https://github.com/rikutons/COJTRhythmGame" target="_blank" rel="noopener">GitHub ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/tayousei.jpg" alt="多様性ゲームの画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">パズルゲーム / リードエンジニア</p>
+            <h3>多様性ゲーム</h3>
+            <p>大学のチーム開発でリードエンジニアを担当。Live Share とアジャイルの進め方を導入してチームを完走させました。</p>
+            <ul class="tags"><li>Unity</li><li>Agile</li></ul>
+            <p class="work__links">
+              <a href="https://unityroom.com/games/tayoseigame" target="_blank" rel="noopener">Play ↗</a>
+              <a href="https://github.com/seisyun9665/TayouseiSuika/" target="_blank" rel="noopener">GitHub ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/tsumutsumu.jpg" alt="ツムツムもどきのゲーム画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">パズルゲーム / 個人開発</p>
+            <h3>ツムツムもどき</h3>
+            <p>同じフルーツを繋げて消すカジュアルパズル。11日間で実装からデプロイまで完走。</p>
+            <ul class="tags"><li>Unity</li><li>C#</li></ul>
+            <p class="work__links">
+              <a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank" rel="noopener">GitHub ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/sauna.jpg" alt="SAUNA PANIC のリザルト画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">ゲームジャム / インターン</p>
+            <h3>SAUNA PANIC</h3>
+            <p>G2 Studios インターンの3日間チーム開発。UI/UX・サウンド・レベルデザインと、チームのまとめ役を担当。</p>
+            <ul class="tags"><li>Unity</li><li>Level Design</li></ul>
+            <p class="work__links">
+              <a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank" rel="noopener">Article ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img work__img--contain"><img src="assets/img/works/rpgtext.png" alt="RPGText のロゴ" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">Minecraft プラグイン / OSS</p>
+            <h3>RPGText</h3>
+            <p>RPG のような会話システムと、シナリオ作成を補助する機能を追加するプラグイン。Bukkit で公開。</p>
+            <ul class="tags"><li>Java</li><li>Bukkit</li></ul>
+            <p class="work__links">
+              <a href="https://dev.bukkit.org/projects/rpgtext" target="_blank" rel="noopener">Bukkit ↗</a>
+              <a href="https://github.com/seisyun9665/RPGText" target="_blank" rel="noopener">GitHub ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/quiz.jpg" alt="Quiz20 の画面" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">Web アプリ</p>
+            <h3>Quiz20</h3>
+            <p>20問に挑戦して結果を確認できるクイズアプリ。Next.js + TailwindCSS、Firebase Hosting で公開。</p>
+            <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Tailwind</li></ul>
+            <p class="work__links">
+              <a href="https://quiz20-a466c.web.app/" target="_blank" rel="noopener">Website ↗</a>
+              <a href="https://github.com/seisyun9665/quiz20" target="_blank" rel="noopener">GitHub ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
+          <div class="work__img"><img src="assets/img/works/paper.jpg" alt="研究のイメージ" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">研究 / 機械学習・NLP</p>
+            <h3>Machine Learning Research</h3>
+            <p>高専ではランキング予測モデル（精度90%超）、学部では誤解のない画像キャプション生成、大学院では LLM による概念ラベル生成を研究。</p>
+            <ul class="tags"><li>Python</li><li>LLM</li><li>NLP</li></ul>
+            <p class="work__links">
+              <a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank" rel="noopener">DEIM2024 受賞 ↗</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section contact">
+    <div class="wrap">
+      <h2 class="contact__title">Thanks for visiting.</h2>
+      <p>コードや活動の詳細は GitHub にまとめています。</p>
+      <a class="btn btn--primary" href="https://github.com/seisyun9665" target="_blank" rel="noopener">github.com/seisyun9665 ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>© <span id="year">2026</span> Shun Seino</p>
+    <p class="footer__credit">Tech icons: <a href="https://devicon.dev/" target="_blank" rel="noopener">Devicon</a> (MIT)</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
