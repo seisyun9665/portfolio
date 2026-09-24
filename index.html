@@ -61,7 +61,7 @@ shun-seino
 
 <span class="p">$</span> cat stack.yml
 <span class="k">lang</span>:   [Java, TypeScript, Swift, Python]
-<span class="k">front</span>:  [Vue, React]
+<span class="k">front</span>:  [Vue, React, Next.js]
 <span class="k">cloud</span>:  [AWS, OCI]
 <span class="k">iac</span>:    [AWS CDK, Terraform]
 <span class="k">ci</span>:     [GitHub Actions]
@@ -75,7 +75,7 @@ shun-seino
       <li><b>5<span>yrs+</span></b>Java 歴</li>
       <li><b>AWS</b>Cloud Practitioner 取得</li>
       <li><b>OCI</b>ゲームサーバーを IaC で運用保守</li>
-      <li><b>8+</b>ゲーム・Web 作品</li>
+      <li><b>9+</b>ゲーム・Web 作品</li>
     </ul>
   </section>
 
@@ -119,25 +119,31 @@ shun-seino
           <div class="tl__card">
             <h3>KDDIアジャイル開発センター株式会社 <em>エンジニア（新卒）</em></h3>
             <p>
-              新卒研修（AWS・Web開発・スクラム・CI/CD・Terraform・デザイン思考）を経て、
-              大規模スマートフォンアプリの保守運用チームに配属。iOS アプリの不具合修正・改善を中心に担当し、
-              仕様書作成 → テスト設計 → 実装 → レビュー → 試験 → マージまでを生成AIを活用した仕様駆動開発で一貫して進めています。
+              新卒研修（約3か月）ではスクラムによるチーム開発で学習継続支援アプリを制作し、
+              <strong>AWS CDK（TypeScript）でインフラをコード化して CI/CD を整備</strong>。GitHub Projects 運用や議事録自動化など、チーム開発環境づくりも主導しました。
+              チーム開発の振り返りは<a href="https://note.com/s_seino/n/n9d4d1b3a5de4" target="_blank" rel="noopener">note の記事</a>として中心になって執筆しています。
             </p>
-            <p>研修期間中はチームの GitHub Projects 運用や議事録自動化など、チーム開発環境の整備を主導しました。</p>
-            <ul class="tags"><li>Swift</li><li>Kotlin / Java</li><li>AWS</li><li>Terraform</li><li>Scrum</li></ul>
+            <p>
+              2026年7月からは<strong>金融・決済領域の大規模スマートフォンアプリ</strong>の保守運用チームに所属。iOS アプリの不具合修正・改善を中心に担当し、
+              仕様書作成 → テスト設計 → 実装 → レビュー → 試験 → マージまでを、生成AIを活用した仕様駆動開発で一貫して進めています。
+              お金を扱うアプリなので、実装より先に仕様とテスト設計を固めることを重視しています。
+            </p>
+            <ul class="tags"><li>Swift</li><li>Kotlin / Java</li><li>AWS CDK</li><li>GitHub Actions</li><li>Scrum</li></ul>
           </div>
         </li>
 
         <li class="tl">
-          <div class="tl__when">学生時代<br>長期インターン</div>
+          <div class="tl__when">学生時代<br>約1年以上</div>
           <div class="tl__card">
-            <h3>Sky株式会社 <em>長期インターン（フロントエンド）</em></h3>
+            <h3>Sky株式会社 <em>長期インターン（Web アプリ開発）</em></h3>
             <p>
-              社内向け業務アプリケーションの改善に従事。TypeScript / Vue.js を用いたフロントエンドの機能追加・UI 改善を中心に担当し、
-              画面からデータベースまでの繋ぎ込み（API 経由のデータ取得・更新処理）も実装しました。
-              既存のコードベースを読み解き、実際に使われている社内ツールを少しずつ良くしていく経験を積みました。
+              約1年以上にわたり、社内勤怠アプリの開発に参加。TypeScript を中心に Vue.js / Laravel、React / Next.js を使った機能実装を担当しました。
             </p>
-            <ul class="tags"><li>TypeScript</li><li>Vue.js</li><li>DB 連携</li><li>社内アプリ改善</li></ul>
+            <p>
+              「この画面に色分け表示を追加する」といったチケット単位で、<strong>Figma のデザイン再現 → API の繋ぎ込み → push → レビュー → 改善 → 本番適用</strong>までを一通り回すサイクルを継続。
+              実際に社員が毎日使うアプリを、レビューを受けながら少しずつ良くしていく経験を積みました。
+            </p>
+            <ul class="tags"><li>TypeScript</li><li>Vue.js</li><li>Laravel</li><li>React / Next.js</li><li>Figma</li></ul>
           </div>
         </li>
 
@@ -192,10 +198,10 @@ shun-seino
             </span>
             <div>
               <h3>Frontend</h3>
-              <p class="skill__meta">TypeScript / Vue / React</p>
+              <p class="skill__meta">TypeScript / Vue / React / Next.js</p>
             </div>
           </header>
-          <p>Sky でのインターンで Vue による社内アプリ改善と DB 連携を経験。個人では React / Next.js で Web サイトやクイズアプリを制作。</p>
+          <p>Sky での約1年以上のインターンで、社内勤怠アプリを Vue / Laravel・React / Next.js で実装。Figma 再現から API 繋ぎ込み、レビュー対応まで経験。</p>
         </article>
 
         <article class="skill">
@@ -237,7 +243,7 @@ shun-seino
               <p class="skill__meta">AWS CDK / Terraform / GitHub Actions</p>
             </div>
           </header>
-          <p>AWS CDK（TypeScript）でインフラをコード化し CI/CD を整理。OCI の構成も Terraform で管理し、変更差分を GitHub Actions で自動チェックして危険な変更を通知する仕組みを自作。</p>
+          <p>新卒研修のチーム開発で AWS CDK（TypeScript）によるインフラのコード化と CI/CD を整備。個人でも OCI の構成を Terraform で管理し、変更差分を GitHub Actions で自動チェックして危険な変更を通知する仕組みを自作。</p>
         </article>
 
         <article class="skill">
@@ -369,6 +375,19 @@ shun-seino
         </article>
 
         <article class="work">
+          <div class="work__img"><img src="assets/img/works/seiza.svg" alt="学んだことが星になり星座を描くイメージ" loading="lazy"></div>
+          <div class="work__body">
+            <p class="work__kind">学習継続支援アプリ / 新卒研修チーム開発</p>
+            <h3>星座アプリ</h3>
+            <p>「学んだことが星になり、繋ぐと自分だけの星座ができる」学習継続アプリ。エンジニア4名+デザイナー1名のスクラムで開発し、AWS CDK による IaC と CI/CD を整備。</p>
+            <ul class="tags"><li>AWS CDK</li><li>TypeScript</li><li>GitHub Actions</li><li>Scrum</li></ul>
+            <p class="work__links">
+              <a href="https://note.com/s_seino/n/n9d4d1b3a5de4" target="_blank" rel="noopener">開発記録（note） ↗</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="work">
           <div class="work__img"><img src="assets/img/works/etude.png" alt="Etude のタイトル画面" loading="lazy"></div>
           <div class="work__body">
             <p class="work__kind">音楽ゲーム / 大学チーム開発</p>
@@ -412,7 +431,7 @@ shun-seino
         <article class="work">
           <div class="work__img"><img src="assets/img/works/sauna.jpg" alt="SAUNA PANIC のリザルト画面" loading="lazy"></div>
           <div class="work__body">
-            <p class="work__kind">ゲームジャム / インターン</p>
+            <p class="work__kind">ゲームジャム / 短期インターン</p>
             <h3>SAUNA PANIC</h3>
             <p>G2 Studios インターンの3日間チーム開発。UI/UX・サウンド・レベルデザインと、チームのまとめ役を担当。</p>
             <ul class="tags"><li>Unity</li><li>Level Design</li></ul>
